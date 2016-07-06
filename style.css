@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+
+.header {
+    height: 20vh;
+    background-color: red;
+    float:left;
+}
+.main_area{
+    width: 100vw;
+}
+.stats {
+    height: 80vh;
+    background-color: pink;
+    float: left;
+    box-sizing: border-box;
+}
+
+#game-space {
+    margin: 0 auto;
+    height: 80vh;
+
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.card {
+    height: 33%;
+    background-color: blue;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+@med
