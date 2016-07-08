@@ -61,7 +61,7 @@ button.reset {
 
 #game-area {
     margin: 0 auto;
-    height: 90vh;
+    height: 100%;
     #background-color: #bcbcbc;
     padding: 20px;
     float: left;
@@ -69,16 +69,24 @@ button.reset {
 }
 
 .card {
-
-    height: 13vw;
+    #height: 33%;
     box-sizing: border-box;
     position: relative;
 }
-img {
+
+.front, .back {
     position: absolute;
-    top: 5%;
-    left: 5%;
-    height: 90%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card img {
+    #top: 5%;
+    #left: 5%;
+    width: 90%;
+    position: relative;
 }
 
 
