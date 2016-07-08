@@ -1,3 +1,9 @@
+html {
+    background: url("images/round-room.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
 body {
     text-align: center;
 }
@@ -49,10 +55,7 @@ button.reset {
 .main_area{
     height: 90vh;
     width: 100vw;
-    background-image: url("images/round-room.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 115%;
+
     float: left;
 }
 
@@ -80,12 +83,16 @@ img {
 
 
 /*About Page*/
-
+body {
+    background-color: transparent;
+}
 
 .about {
     font-family: arial, sans-serif;
     text-align: left;
     margin: 3%;
+    color: white;
+    float: left;
 }
 
 .about h1 {
@@ -106,5 +113,11 @@ img {
 }
 
 #portfolio a:hover {
-    color: lightslategrey;
+    color: azure;
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        height: 30vw;
+    }
 }
