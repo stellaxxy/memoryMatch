@@ -1,12 +1,14 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 3;
+var total_possible_matches = 0;
 var match_counter = 0;
 
 $(document).ready(initialize_game);
 
 function initialize_game() {
-    $("div.card").on("click", card_clicked)
+    $("div.card").on("click", card_clicked);
+    total_possible_matches = $(".card").length;
+    console.log('total_possible_matches : ', total_possible_matches);
 }
 
 function card_clicked() {
@@ -37,11 +39,13 @@ function card_clicked() {
     else {
         setTimeout(showBack, 2000);
         function showBack() {
-            $(".card:not(.matched)").find('.back').show();
-            $(".card:not(.matched)").off("click").on("click", card_clicked);
+            first_card_clicked.find('.back').show();
+            second_card_clicked.find('.back').show();
+            first_card_clicked.off("click").on("click", card_clicked);
+            second_card_clicked.off("click").on("click", card_clicked);
+            first_card_clicked = null;
+            second_card_clicked = null;
         }
-        first_card_clicked = null;
-        second_card_clicked = null;
         return;
     }
 }

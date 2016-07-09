@@ -69,9 +69,10 @@ button.reset {
 }
 
 .card {
-    #height: 33%;
+    height: 143px;
     box-sizing: border-box;
     position: relative;
+    margin: 10px;
 }
 
 .front, .back {
@@ -86,7 +87,7 @@ button.reset {
     #top: 5%;
     #left: 5%;
     width: 90%;
-    position: relative;
+    #position: relative;
 }
 
 
@@ -126,6 +127,6 @@ body {
 
 @media screen and (max-width: 767px) {
     .card {
-        height: 30vw;
+        /*height: 30vw;*/
     }
 }
