@@ -7,8 +7,8 @@ $(document).ready(initialize_game);
 
 function initialize_game() {
     $("div.card").on("click", card_clicked);
-    total_possible_matches = $(".card").length;
-    console.log('total_possible_matches : ', total_possible_matches);
+    total_possible_matches = $(".card").length / 2;
+    // console.log('total_possible_matches : ', total_possible_matches);
 }
 
 function card_clicked() {
@@ -23,6 +23,7 @@ function card_clicked() {
         second_card_clicked = the_card;
     }
     if (first_card_clicked.find(".cardFront").attr("src") == second_card_clicked.find(".cardFront").attr("src")) {
+        // This .addclass might be leftover from previous iteration and unnecessary now
         first_card_clicked.addClass("matched");
         second_card_clicked.addClass("matched");
         match_counter++;
@@ -41,11 +42,12 @@ function card_clicked() {
         function showBack() {
             first_card_clicked.find('.back').show();
             second_card_clicked.find('.back').show();
-            first_card_clicked.off("click").on("click", card_clicked);
+            first_card_clicked.off("click").on("click", card_clicked);  // Is this .off necessary since its done above
             second_card_clicked.off("click").on("click", card_clicked);
             first_card_clicked = null;
             second_card_clicked = null;
         }
+
         return;
     }
 }
