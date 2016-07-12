@@ -1,13 +1,11 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
 var total_possible_matches = 0;
-var match_counter = 0;
 var can_be_clicked = true;
 var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
-
 
 $(document).ready(initialize_game);
 
@@ -23,7 +21,6 @@ function reset() {
     games_played++;
     reset_stats();
     display_stats();
-    //reset all cards to have the back face showing
     reset_cards();
 }
 
@@ -67,7 +64,6 @@ function card_clicked() {
     // SECOND CARD
     else {
         second_card_clicked = the_card;
-        the_card.off("click");
         attempts++;
         display_stats();
     }
@@ -76,15 +72,13 @@ function card_clicked() {
     if (first_card_clicked.find(".cardFront").attr("src") == second_card_clicked.find(".cardFront").attr("src")) {
         first_card_clicked.addClass("matched");
         second_card_clicked.addClass("matched");
-        match_counter++;
         matches++;
         display_stats();
         first_card_clicked = null;
         second_card_clicked = null;
 
-
         // CHECK FOR WIN
-        if (match_counter == total_possible_matches) {
+        if (matches == total_possible_matches) {
             $("#game-area").text("Cheers, mate. You've won the game!")
         }
         else {
@@ -94,7 +88,7 @@ function card_clicked() {
     // CARDS DONT MATCH
     else {
         can_be_clicked = false;
-        setTimeout(showBack, 1200);
+        setTimeout(showBack, 1400);
         function showBack() {
             first_card_clicked.find('.back').show();
             second_card_clicked.find('.back').show();
