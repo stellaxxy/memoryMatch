@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="eng" ng-app="mmApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Match Game</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="memgame.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="appController as ac">
+<header class="header col-sm-12 col-xs-12">
+    <!--logo-->
+    <!--name and settings and about links-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">The Game Name</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Settings</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Side Menu -->
+<div class="main_area">
+    <div class="stats hidden-xs col-sm-2">
+        <!--<div class="sideDiv">-->
+            <!--games played-->
+            <div class="games-played">
+                <div class="statsLabel">Games Played</div>
+                <div class="value">{{ac.gamesPlayed}}</div>
+            </div>
+            <!--attempts-->
+            <div class="attempts">
+                <div class="statsLabel">Attempts</div>
+                <div class="value">{{ac.attempts}}</div>
+            </div>
+            <!--accuracy-->
+            <div class="accuracy">
+                <div class="statsLabel">Accuracy</div>
+                <div class="value">{{ac.accuracy}}</div>
+            </div>
+            <!--reset button-->
+            <button class="reset" ng-click="ac.resetGame()">Reset Game</button>
+        <!--</div>-->
+    </div>
+    <div id="game-area" class="col-sm-10 col-xs-12">
+        <card ng-repeat="card in ac.cardArr" ng-click="ac.card_clicked(card)"></card>
+    </div>
+</div>
+</body>
+</html>
