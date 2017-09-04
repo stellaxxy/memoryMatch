@@ -29,3 +29,12 @@ body{
   left: 0px;
   top: 0px;
 }
+/*
+  <div className="modal">
+    <div className="modalShadow" />
+    <div className="modalBody">{props.message}</div>
+  </div>
+  */
+
+
+

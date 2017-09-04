@@ -1,0 +1,48 @@
+
+.modalBody, .modalContent{
+  left: 50%;
+  top: 50%;  
+  transform: translate(-50%, -50%);
+}
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.modalContent{
+  position: fixed;
+    
+}
+.modalBody{
+  position: absolute;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  z-index: 2;
+}
+.modalShadow{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: 1;
+}
+
+.modalClose{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: black;
+  color: lightgrey;
+  padding: 1%;
+  cursor: pointer;
+}
+.modalClose:hover{
+  color: white;
+}
+
