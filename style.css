@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+}
+
+body > * {
+    color: white;
+}
+
+#header {
+    height: 30vh;
+    overflow-y: auto;
+}
+
+
+#mainContainer {
+    font-size: 0;
+}
+
+#stats {
+    display: inline-block;
+    width: 15%;
+    height: 70vh;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.decoration {
+    width: 15%;
+    height: 70vh;
+}
+
+#game_area {
+    width: 70%;
+    height: 70vh;
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    height: 30%;
+}
+
+.card {
+    height: 100%;
+    width: 16%;
+
+}
+
+.back {
+    background-image: url("images/FrogCard.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.front {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.harry {
+    background-image: url("images/harrypotter.jpg");
+
+}
+
+.hermione {
+    background-image: url("images/hermione.jpg");
+}
+
