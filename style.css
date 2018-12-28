@@ -16,25 +16,29 @@ body > * {
 
 #mainContainer {
     font-size: 0;
+    width: 100vw;
+    height: 70vh;
 }
 
 #stats {
     display: inline-block;
     width: 15%;
-    height: 70vh;
+    height: 100%;
     font-size: 1rem;
     vertical-align: top;
 }
 
 .decoration {
     width: 15%;
-    height: 70vh;
+    height: 100%;
+    display: inline-block;
 }
 
 #game_area {
     width: 70%;
-    height: 70vh;
+    height: 100%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .row {
