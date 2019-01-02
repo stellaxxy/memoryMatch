@@ -2,59 +2,79 @@
 <html>
 <head>
     <title>Memory Match V0.1</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
     <link type="text/css" href="style.css" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
     <div id="header">
-        <h1>MAGIC BATTLE</h1>
-        <div id="link">
-            <a href="about.html">About</a>
+        <div class="headContainer">
+            <h1 class="mainHeading">MEMORY MATCH</h1>
+            <div id="link">
+                <a href="about.html">About</a>
+                <a href="#">Setting</a>
+            </div>
         </div>
+        <img class="flag1" src="images/csp-flags.png" alt="flags">
+        <img class="flag2" src="images/csp-flags.png" alt="flags">
+        <img class="decor1" src="images/FF-Doors-Purple.png" alt="purple door">
+        <img class="decor2" src="images/276927493009211.png" alt="pink door">
+        <img class="decor3" src="images/door.png" alt="green door">
+        <img class="decor4" src="images/pink%20door%202.png" alt="pink door">
     </div>
     <div id="mainContainer">
         <div id="stats">
-            <h2>Stats:</h2>
-            <div class="games-played">
-                <p class="label">Games Played: <span class="value"></span></p>
+            <div class="statsContainer">
+                <h2>Stats:</h2>
+                <div class="games-played">
+                    <p class="label">Games Played: <span class="value"></span></p>
+                </div>
+                <div class="attempts">
+                    <p class="label">Attempts: <span class="value"></span></p>
+                </div>
+                <div class="accuracy">
+                    <p class="label">Accuracy: <span class="value"></span></p>
+                </div>
+                <button class="reset">Reset Game</button>
             </div>
-            <div class="attempts">
-                <p class="label">Attempts: <span class="value"></span></p>
-            </div>
-            <div class="accuracy">
-                <p class="label">Accuracy: <span class="value"></span></p>
-            </div>
-            <button class="reset">Reset Game</button>
+            <img class="ballon movingBallon" src="images/ballon.png" alt="ballon">
+            <img class="ballon1 movingBallon" src="images/ballon3.png" alt="ballon">
         </div>
         <div id="game_area">
-            <div class="row">
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-            </div>
-            <div class="row">
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-            </div>
-            <div class="row">
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
-                <div class="card back"></div>
+            <div class="gameContainer">
+                <div class="row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
             </div>
         </div>
-        <div class="decoration"></div>
+        <div class="decoration">
+            <img class="sullyDecoration" src="images/scary.png" alt="sully">
+            <img class="ballon2 movingBallon" src="images/ballon2.png" alt="ballon">
+        </div>
     </div>
-
+    <div class="ending"></div>
 </body>
 </html>

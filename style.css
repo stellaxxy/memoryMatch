@@ -2,6 +2,9 @@ body {
     margin: 0;
     background-color: black;
     height: 100vh;
+    background-image: url("images/monsters-university-sulley-vs-mike-wazowski.jpg");
+    background-size: 100vw 100vh;
+    overflow: hidden;
 }
 
 body > * {
@@ -11,8 +14,34 @@ body > * {
 #header {
     height: 30vh;
     overflow-y: auto;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 2.5vh;
 }
 
+.headContainer {
+    width: 30%;
+    height: 60%;
+    border: 2px solid white;
+    border-radius: 8%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: black;
+}
+
+.mainHeading,
+#link {
+    text-align: center;
+}
+
+#link {
+    cursor: pointer;
+}
+
+#link a {
+    color: white;
+    padding: 2%;
+}
 
 #mainContainer {
     font-size: 0;
@@ -26,12 +55,34 @@ body > * {
     height: 100%;
     font-size: 1rem;
     vertical-align: top;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+.statsContainer {
+    border: 2px solid white;
+    border-radius: 8%;
+    width: 80%;
+    height: 50%;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+
+.reset {
+    cursor: pointer;
+    font-family: 'Pacifico', cursive;
+    border-radius: 8px;
 }
 
 .decoration {
     width: 15%;
     height: 100%;
     display: inline-block;
+    position: relative;
+    overflow-x: visible;
 }
 
 #game_area {
@@ -39,37 +90,195 @@ body > * {
     height: 100%;
     display: inline-block;
     vertical-align: top;
+
+}
+
+.gameContainer {
+    background-color: black;
+    width: 100%;
+    height: 90%;
+    border: 1px solid black;
+    border-radius: 10%;
 }
 
 .row {
     display: flex;
     justify-content: space-evenly;
-    height: 30%;
+    height: 33%;
 }
 
 .card {
     height: 100%;
     width: 16%;
-
+    cursor: pointer;
 }
 
-.back {
-    background-image: url("images/FrogCard.png");
-    background-size: contain;
+.back:hover {
+    transform: translateY(4px);
+}
+
+.card.back {
+    background-image: url("images/clipart-baby-monster-6.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .front {
-    background-size: contain;
+    background-size: 75% 100%;
     background-repeat: no-repeat;
 }
 
-.harry {
-    background-image: url("images/harrypotter.jpg");
+.front1 {
+    background-image: url("images/Squishy.png");
+}
+
+.front2 {
+    background-image: url("images/boo.png");
+}
+
+.front3 {
+    background-image: url('images/boo-monsters-inc-png-5.png');
+}
+
+.front4 {
+    background-image: url('images/tumblr_mm4lw2dcAf1s5jjtzo1_500.png');
+}
+
+.front5 {
+    background-image: url('images/monster inc university-solilovemusic (11).png');
+}
+
+.front6 {
+    background-image: url('images/Mike1.png');
+}
+
+.front7 {
+    background-image: url('images/Monsters-Inc-Stickers-695141.png');
+}
+
+.front8 {
+    background-image: url('images/monsters_university_png_by_littlemixlover-d63ndpq.png');
+}
+
+.front9 {
+    background-image: url('images/Randall.png');
+}
+
+.ending {
+    display: none;
 
 }
 
-.hermione {
-    background-image: url("images/hermione.jpg");
+.sullyDecoration {
+    width: 130%;
+    position: absolute;
+    bottom: 6%;
+    left: 0;
+    transform: rotate(30deg);
 }
 
+@keyframes moveSully {
+    0% {
+        transform: scale(1, 1) rotate(30deg);
+
+    }
+    50%{
+        transform: scale(1.8, 1.8) rotate(-20deg);
+    }
+    100%{
+        transform: scale(1 ,1) rotate(30deg)
+    }
+}
+
+.movingSully {
+    animation-name: moveSully;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+
+.flag1,
+.flag2 {
+    width: 35%;
+    position: absolute;
+}
+
+.flag1 {
+    top: 3%;
+}
+
+.flag2 {
+    right: 0;
+    top: 3%;
+}
+
+.decor1 {
+    width: 5%;
+    position: absolute;
+}
+
+.decor2,
+.decor3,
+.decor4 {
+    width: 7%;
+    position: absolute;
+}
+
+
+.decor1 {
+    top: 8%;
+    left: 6.8%;
+    transform: rotate(6deg);
+}
+
+.decor2 {
+    top: 6.5%;
+    right: 8%;
+    transform: rotate(-6deg);
+}
+
+.decor3 {
+    top: 10%;
+    left: 18%;
+}
+
+.decor4 {
+    top: 10%;
+    right: 19%;
+}
+
+.ballon {
+    width: 5%;
+    position: absolute;
+    transform: translateY(40vh);
+}
+
+.ballon1 {
+    width: 4%;
+    position: absolute;
+    left: 2%;
+    bottom: -10vh;
+    transform: translateY(40vh);
+}
+
+.ballon2 {
+    width: 35%;
+    position: absolute;
+    left: 2%;
+    bottom: -10vh;
+    transform: translateY(40vh);
+}
+
+@keyframes moveBallon {
+    from {
+        transform: translateY(5vh);
+    }
+    to {
+        transform: translateY(-150vh);
+    }
+}
+
+.movingBallon {
+    animation-name: moveBallon;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
