@@ -41,6 +41,8 @@ body > * {
 #link a {
     color: white;
     padding: 2%;
+    font-size: 2vh;
+    text-decoration: none;
 }
 
 #mainContainer {
@@ -63,7 +65,7 @@ body > * {
     border: 2px solid white;
     border-radius: 8%;
     width: 80%;
-    height: 50%;
+    height: 60%;
     position: relative;
     left: 50%;
     top: 40%;
@@ -165,8 +167,20 @@ body > * {
 }
 
 .ending {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background-color: lightsalmon;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.endingParagraph {
+    font-size: 10vh;
 }
 
 .sullyDecoration {

@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+.mainContent {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mainParagraph {
+    text-align: justify;
+}
+
+.listOfSkills {
+    list-style-type: none;
+    padding: 0;
+}
+

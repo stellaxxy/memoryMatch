@@ -3,10 +3,15 @@ $(document).ready(startApp);
 function startApp(){
     assignFront();
     clickCard();
+    hideEnding();
     setInterval(addAnimationSully, 8000);
     setInterval(toggleBallon, 6000);
     setInterval(toggleBallon1, 7000);
     setInterval(toggleBallon2, 5000);
+}
+
+function hideEnding(){
+    $('.ending').hide();
 }
 
 function toggleBallon(){
@@ -56,7 +61,7 @@ function clickCard(){
 
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 4;
+var total_possible_matches = 9;
 var match_counter = 0;
 var clickable = true;
 
@@ -81,7 +86,7 @@ function card_clicked(){
             first_card_clicked = null;
             second_card_clicked = null;
             if(match_counter === total_possible_matches){
-                $('.ending').text('You Won!').show();
+                $('.ending').show();
             }
             return;
         } else {
