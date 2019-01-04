@@ -1,12 +1,14 @@
 body {
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-y: scroll;
     margin: 0;
+    background-color: lightsalmon;
 }
 
 .mainContent {
-    width: 65%;
+    width: 60%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -14,6 +16,11 @@ body {
 
 .mainParagraph {
     text-align: justify;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5vh;
 }
 
 .listOfSkills {
@@ -21,3 +28,43 @@ body {
     padding: 0;
 }
 
+.designerPicture {
+    width: 85%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.pictureContainer {
+    width: 100%;
+    height: 35%;
+    overflow-y: hidden;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: relative;
+    top: 2%;
+}
+
+.textContainer {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+    top: 3%;
+    font-family: Arial;
+}
+
+.portfolioLink {
+    text-decoration: none;
+    color: black;
+    font-size: 3vh;
+}
+
+.textContainer h1 {
+    font-size: 5vh;
+
+}
+
+.portfolioLink:hover {
+    color: white;
+}
