@@ -90,6 +90,19 @@ body > * {
     background-color: black;
 }
 
+@media only screen and (max-width: 768px) {
+    .statsContainer {
+        font-size: 2vh;
+        height: 70%;
+    }
+    .reset {
+        font-size: 2vh;
+    }
+    .mainHeading {
+        font-size: 4vh;
+    }
+}
+
 .reset {
     cursor: pointer;
     font-family: 'Pacifico', cursive;
@@ -378,3 +391,4 @@ body > * {
        transform: translate(-50%, -50%) rotate(10deg);
     }
 }
+

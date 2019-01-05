@@ -3,7 +3,10 @@ body {
     width: 100vw;
     overflow-y: scroll;
     margin: 0;
-    background-color: lightsalmon;
+   #background-color: lightsalmon;
+   background-image: url("images/il_570xN.843866561_h0n7.jpg");
+    background-repeat: none;
+    background-size: contain;
 }
 
 .mainContent {
@@ -43,6 +46,7 @@ body {
     border-radius: 20px;
     position: relative;
     top: 2%;
+    background-color: black;
 }
 
 .textContainer {
@@ -52,19 +56,23 @@ body {
     position: relative;
     top: 3%;
     font-family: Arial;
+    background-color: black;
+    color: white;
 }
 
 .portfolioLink {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 3vh;
 }
 
 .textContainer h1 {
     font-size: 5vh;
-
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .portfolioLink:hover {
-    color: white;
+    color: #6a6969;
 }
+
