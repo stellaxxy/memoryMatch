@@ -60,22 +60,15 @@ function addAnimationSully(){
 }
 
 function assignFront(){
+
     var frontImageArray = ['front1', 'front2', 'front3', 'front4', 'front5', 'front6', 'front7', 'front8', 'front9'];
     var doubleFrontImageArray = frontImageArray.concat(frontImageArray);
 
     for(var frontImageIndex = doubleFrontImageArray.length-1; frontImageIndex >= 0; frontImageIndex--){
         var randomIndex = Math.floor(Math.random() * doubleFrontImageArray.length);
-        var temp = doubleFrontImageArray[frontImageIndex];
-        doubleFrontImageArray[frontImageIndex] = doubleFrontImageArray[randomIndex];
-        doubleFrontImageArray[randomIndex] = temp;
-    }
-
-    var allCards = $('.row').find('.card');
-    var randomizedArrayIndex = 0;
-    for(var allCardsIndex = 0; allCardsIndex < allCards.length; allCardsIndex++){
-
-        $(allCards[allCardsIndex]).addClass('front back ' + doubleFrontImageArray[randomizedArrayIndex]);
-        randomizedArrayIndex++;
+        const card = $('<div>').addClass(`card front back ${doubleFrontImageArray[randomIndex]}`);
+        $('.gameContainer').append(card);
+        doubleFrontImageArray.splice(randomIndex, 1);
     }
 }
 
@@ -128,7 +121,7 @@ function card_clicked(){
                 first_card_clicked = null;
                 second_card_clicked = null;
                 clickable = true;
-            }, 2000);
+            }, 1000);
         }
         accuracy = ((matches / attempts)*100).toFixed(2);
         display_stats();
@@ -145,10 +138,11 @@ function reset_clicked(){
     reset_stats();
     display_stats();
     hideEnding();
-    takeOffFront();
+    //takeOffFront();
+    $('.gameContainer').empty();
     assignFront();
-    $('.card').removeClass('disable');
-
+    clickable = true;
+    clickCard();
 }
 
 function display_stats(){

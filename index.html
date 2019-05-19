@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Memory Match V0.1</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="main.js" as="script">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link type="text/css" href="style.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
@@ -17,7 +18,6 @@
             <h1 class="mainHeading">MEMORY MATCH</h1>
             <div id="link">
                 <a href="about.html" target="_blank">About</a>
-                <a href="#">Setting</a>
             </div>
         </div>
         <img class="flag1" src="images/csp-flags.png" alt="flags">
@@ -41,38 +41,13 @@
                     <p class="label">Accuracy: <span class="value"></span></p>
                 </div>
                 <button class="reset">Reset Game</button>
+                <button class="audioButton"><i class="fas fa-volume-up"></i></button>
             </div>
             <img class="ballon movingBallon" src="images/ballon.png" alt="ballon">
             <img class="ballon1 movingBallon" src="images/ballon3.png" alt="ballon">
-            <button class="audioButton"><i class="fas fa-volume-up"></i></button>
         </div>
         <div id="gameArea">
-            <div class="gameContainer">
-                <div class="row">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-                <div class="row">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-                <div class="row">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-            </div>
+            <div class="gameContainer"></div>
         </div>
         <div class="decoration">
             <img class="sullyDecoration" src="images/scary.png" alt="sully">
@@ -81,6 +56,8 @@
     </div>
     <div class="ending">
         <p class="endingParagraph">You Did It!</p>
+        <button class="reset endingReset">Reset Game</button>
+
     </div>
     <button class="startButton animationStartButton">Start</button>
 </body>
