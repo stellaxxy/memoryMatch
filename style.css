@@ -528,6 +528,32 @@ body > * {
     }
 }
 
+@media only screen and (orientation: landscape) and (max-width: 844px) {
+    .mainHeading {
+        font-size: 130%;
+        top: 35%;
+    }
+    #link a {
+        font-size: 96%;
+    }
+    .statsContainer h2,
+    .statsContainer div {
+        font-size: 0.85rem;
+    }
+    .reset {
+        font-size: 0.7rem;
+    }
+    .audioButton {
+        font-size: 0.75rem;
+    }
+    .card.back {
+        background-size: 90px 79px;
+    }
+    .front {
+        background-size: 74px 80px;
+    }
+}
+
 @media only screen and (max-width: 769px) {
 
     #gameArea {
@@ -572,7 +598,7 @@ body > * {
     .statsContainer h2,
     .statsContainer div {
         display: inline-block;
-        font-size: 1.07rem;
+        font-size: 1.3rem;
         margin-left: 6px;
         margin-right: 6px;
     }
@@ -581,7 +607,7 @@ body > * {
         margin-bottom: 0;
     }
     .reset {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         width: 20%;
     }
     .audioButton {
@@ -611,15 +637,61 @@ body > * {
         font-size: 0.90rem;
     }
     .card.back {
-        background-size: 75px 65px;
+        background-size: 105px 95px;
     }
     .front {
-        background-size: 65px 70px;
+        background-size: 100px 105px;
     }
     .startButton {
         font-size: 13vh;
     }
 
+}
+
+@media only screen and (orientation: landscape) and (max-width: 769px){
+    .statsContainer {
+        height: 83%;
+    }
+    #gameArea {
+        height: 87%;
+    }
+    #stats {
+        height: 13%;
+    }
+    .card.back {
+        background-size: 55px 45px;
+    }
+    .startButton {
+        box-shadow: 0 8px grey;
+    }
+    .mainHeading {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        font-size: 0.85rem;
+    }
+    #link a {
+        font-size: 0.65rem;
+    }
+    .statsContainer h2,
+    .statsContainer div {
+        font-size: 0.85rem;
+    }
+    .audioButton {
+        font-size: 0.85rem;
+        width: 8%;
+    }
+    .reset {
+        font-size: 0.75rem;
+    }
+    .front {
+        background-size: 40px 45px;
+    }
+    .ending {
+        width: 330px;
+        height: 500px;
+        top: 65%;
+    }
 }
 
 @media only screen and (max-width: 679px) {
@@ -737,6 +809,41 @@ body > * {
     .reset,
     .audioButton {
         font-size: 0.68rem;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 576px){
+    .ending {
+        width: 280px;
+        height: 390px;
+        top: 62%;
+    }
+    .reset.endingReset {
+        font-size: 100%;
+    }
+    .card.back {
+        background-size: 50px 40px;
+    }
+    .front {
+        background-size: 39px 42px;
+    }
+    .mainHeading {
+        font-size: 0.83rem;
+    }
+    #link a {
+        font-size: 0.58rem;
+    }
+    .statsContainer h2,
+    .statsContainer div {
+        font-size: 0.75rem;
+    }
+    .reset {
+        font-size: 0.7rem;
+        width: 17%;
+    }
+    .audioButton {
+        font-size: 0.8rem;
+        width: 7%;
     }
 }
 
