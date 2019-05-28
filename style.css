@@ -130,7 +130,7 @@ body > * {
     width: 100%;
     height: 90%;
     border: 1px solid black;
-    border-radius: 10%;
+    border-radius: 5%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -192,7 +192,7 @@ body > * {
 }
 
 .front8 {
-    background-image: url('images/monsters_university_png_by_littlemixlover-d63ndpq.png');
+    background-image: url('images/Sullivan y Mike.png');
 }
 
 .front9 {
@@ -374,9 +374,9 @@ body > * {
 .reset.endingReset {
     width: 100px;
     height: 40px;
-    transform: rotate(-12deg);
     background-color: darkred;
     color: white;
+    transform: rotate(-12deg);
 }
 
 @keyframes animateStartButton {
