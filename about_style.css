@@ -3,10 +3,9 @@ body {
     width: 100vw;
     overflow-y: scroll;
     margin: 0;
-   #background-color: lightsalmon;
-   background-image: url("images/il_570xN.843866561_h0n7.jpg");
-    background-repeat: none;
-    background-size: contain;
+    background-image: url("images/il_570xN.843866561_h0n7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mainContent {
@@ -29,6 +28,7 @@ body {
 .listOfSkills {
     list-style-type: none;
     padding: 0;
+    font-size: 2.5vh
 }
 
 .designerPicture {
@@ -53,6 +53,8 @@ body {
     border: 2px solid black;
     border-radius: 20px;
     width: 100%;
+    height: 60%;
+    overflow-y: scroll;
     position: relative;
     top: 3%;
     font-family: Arial;
@@ -70,6 +72,10 @@ body {
     font-size: 5vh;
     margin-top: 1%;
     margin-bottom: 1%;
+}
+
+.textContainer h2 {
+    font-size: 3vh;
 }
 
 .portfolioLink:hover {
