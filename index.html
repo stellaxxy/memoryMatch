@@ -5,9 +5,11 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link type="text/css" href="style.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div id="header">
@@ -29,7 +31,7 @@
         <div id="stats">
             <div class="statsContainer">
                 <h2>Stats:</h2>
-                <div class="games-played">
+                <div class="gamesPlayed">
                     <p class="label">Games Played: <span class="value"></span></p>
                 </div>
                 <div class="attempts">
@@ -42,8 +44,9 @@
             </div>
             <img class="ballon movingBallon" src="images/ballon.png" alt="ballon">
             <img class="ballon1 movingBallon" src="images/ballon3.png" alt="ballon">
+            <button class="audioButton"><i class="fas fa-volume-up"></i></button>
         </div>
-        <div id="game_area">
+        <div id="gameArea">
             <div class="gameContainer">
                 <div class="row">
                     <div class="card"></div>
@@ -79,5 +82,6 @@
     <div class="ending">
         <p class="endingParagraph">You Did It!</p>
     </div>
+    <button class="startButton animationStartButton">Start</button>
 </body>
 </html>

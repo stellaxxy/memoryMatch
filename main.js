@@ -1,13 +1,38 @@
 $(document).ready(startApp);
 
 function startApp(){
+    clickable = false;
     assignFront();
-    clickCard();
     hideEnding();
+    clickReset();
+    display_stats();
+    clickStart();
+    clickCard();
     setInterval(addAnimationSully, 8000);
-    setInterval(toggleBallon, 6000);
-    setInterval(toggleBallon1, 7000);
+    setInterval(toggleBallon, 5000);
+    setInterval(toggleBallon1, 6000);
     setInterval(toggleBallon2, 5000);
+    setInterval(animateStartButton, 1000);
+}
+
+function animateStartButton(){
+    var startButton = $('.startButton');
+    if(startButton.is(':visible')){
+        startButton.toggleClass('animationStartButton');
+    }
+}
+
+function clickStart() {
+    $('.startButton').click(startGame);
+}
+
+function startGame(){
+    playBackgroundAudio();
+    clickable = true;
+    setTimeout(function(){
+        $('.startButton').hide();
+    }, 300);
+    clickAudioButton();
 }
 
 function hideEnding(){
@@ -65,6 +90,11 @@ var total_possible_matches = 9;
 var match_counter = 0;
 var clickable = true;
 
+var matches = 0;
+var attempts = 0;
+var accuracy = 0;
+var games_played = 0;
+
 function card_clicked(){
     if(clickable === false){
         return false;
@@ -79,16 +109,17 @@ function card_clicked(){
         return;
     } else {
         second_card_clicked = $(this);
+        attempts++;
         var firstImageURL = first_card_clicked.css('background-image');
         var secondImageURL = second_card_clicked.css('background-image');
         if(firstImageURL === secondImageURL){
             match_counter++;
+            matches++;
             first_card_clicked = null;
             second_card_clicked = null;
             if(match_counter === total_possible_matches){
                 $('.ending').show();
             }
-            return;
         } else {
             clickable = false;
             setTimeout(function(){
@@ -98,52 +129,66 @@ function card_clicked(){
                 second_card_clicked = null;
                 clickable = true;
             }, 2000);
-            return;
         }
+        accuracy = ((matches / attempts)*100).toFixed(2);
+        display_stats();
+        return;
     }
 }
 
-
-
-
-/*
-function clickCard(){
-    $('.card').click(addFront);
+function clickReset(){
+    $('.reset').click(reset_clicked);
 }
 
-var usedRandomIndex = [];
+function reset_clicked(){
+    games_played++;
+    reset_stats();
+    display_stats();
+    hideEnding();
+    takeOffFront();
+    assignFront();
+    $('.card').removeClass('disable');
 
-function addFront(){
-    //get the array of characters
-    //get the random index
-    //get empty used index array
-    //check if the random index have been used twice
-    //go through each element in the used index array
-        //check if random index is equal to element in the used index array
-            //yes: counter++
-            //no: do nothing
-    //repeat
-    //check if counter equals to 2
-        //yes: get another random index and check again
-        //no: use the index to add class and add the index to used index array
-    var characterArray = ['harry', 'hermione'];
-
-    do {
-        var randomIndex = Math.floor(Math.random() * characterArray.length);
-        var counter = 0;
-
-        for(var usedIndex = 0; usedIndex < usedRandomIndex.length; usedIndex++){
-            if(randomIndex === usedRandomIndex[usedIndex]){
-                counter++
-            }
-        }
-    } while (counter === 2);
-
-    $(this).addClass('front ' + characterArray[randomIndex]);
-    usedRandomIndex.push(randomIndex);
-    compareFront();
 }
 
+function display_stats(){
+    $('.gamesPlayed .value').text(games_played);
+    $('.attempts .value').text(attempts);
+    $('.accuracy .value').text(accuracy + '%');
+}
 
-*/
+function reset_stats(){
+    accuracy = 0;
+    matches = 0;
+    match_counter = 0;
+    attempts = 0;
+    display_stats();
+}
 
+function takeOffFront(){
+    var allCards = $('.card');
+    for(var index = 0; index < allCards.length; index++){
+        var allClasses = allCards[index].className;
+        var startPosition = allClasses.indexOf(" ");
+        var classesToBeRemoved = allClasses.substring(startPosition);
+        $(allCards[index]).removeClass(classesToBeRemoved);
+    }
+}
+
+var newAudio = new Audio('audio/BGM 011.mp3');
+
+function playBackgroundAudio(){
+    newAudio.play();
+}
+
+function clickAudioButton(){
+    $('.audioButton').click(turnOffAudio);
+}
+
+function turnOffAudio(){
+    if(newAudio.paused){
+        newAudio.play();
+    } else {
+        newAudio.pause();
+    }
+}

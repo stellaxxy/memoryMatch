@@ -15,7 +15,6 @@ body > * {
     height: 30vh;
     overflow-y: auto;
     font-family: 'Berkshire Swash', cursive;
-    font-size: 2.5vh;
 }
 
 .headContainer {
@@ -34,8 +33,25 @@ body > * {
     text-align: center;
 }
 
+.mainHeading {
+    margin: 0;
+    font-size: 5vh;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #link {
     cursor: pointer;
+    width: 80%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
 }
 
 #link a {
@@ -55,10 +71,11 @@ body > * {
     display: inline-block;
     width: 15%;
     height: 100%;
-    font-size: 1rem;
+    font-size: 2.3vh;
     vertical-align: top;
     font-family: 'Pacifico', cursive;
     text-align: center;
+    position: relative;
 }
 
 .statsContainer {
@@ -73,10 +90,24 @@ body > * {
     background-color: black;
 }
 
+@media only screen and (max-width: 768px) {
+    .statsContainer {
+        font-size: 2vh;
+        height: 70%;
+    }
+    .reset {
+        font-size: 2vh;
+    }
+    .mainHeading {
+        font-size: 4vh;
+    }
+}
+
 .reset {
     cursor: pointer;
     font-family: 'Pacifico', cursive;
     border-radius: 8px;
+    font-size: 2.3vh;
 }
 
 .decoration {
@@ -87,7 +118,7 @@ body > * {
     overflow-x: visible;
 }
 
-#game_area {
+#gameArea {
     width: 70%;
     height: 100%;
     display: inline-block;
@@ -270,13 +301,13 @@ body > * {
 }
 
 .ballon {
-    width: 5%;
+    width: 28%;
     position: absolute;
     transform: translateY(40vh);
 }
 
 .ballon1 {
-    width: 4%;
+    width: 30%;
     position: absolute;
     left: 2%;
     bottom: -10vh;
@@ -305,3 +336,59 @@ body > * {
     animation-duration: 5s;
     animation-timing-function: linear;
 }
+
+.startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17vh;
+    font-family: 'Pacifico', cursive;
+    padding: 0 3%;
+    cursor: pointer;
+    background-color: salmon;
+    border-radius: 30px;
+    box-shadow: 0 15px grey;
+}
+
+.animationStartButton {
+    animation-name: animateStartButton;
+    animation-timing-function: linear;
+    animation-duration: 0.9s;
+}
+
+.startButton:active {
+    box-shadow: 0 5px darkslategrey;
+    transform: translate(-50%, -45%);
+}
+
+.audioButton {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+@keyframes animateStartButton {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+    100% {
+       transform: translate(-50%, -50%) rotate(10deg);
+    }
+}
+
